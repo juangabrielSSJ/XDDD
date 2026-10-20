@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taller Barro: cerámica hecha a mano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --ink: #14181f;
+  --muted: #55606e;
+  --accent: #1f3fbf;
+  --on-accent: #ffffff;
+  --glaze: #a9c7bc;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151c; --surface: #1a2029; --ink: #eef1f4; --muted: #a3adba;
+    --accent: #8ea4ff; --on-accent: #11151c; --glaze: #3d5a50; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151c; --surface: #1a2029; --ink: #eef1f4; --muted: #a3adba;
+  --accent: #8ea4ff; --on-accent: #11151c; --glaze: #3d5a50; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+.logo { font-weight: 800; font-size: 1.25rem; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 20px; }
+nav a:hover, nav a:focus-visible { color: var(--accent); }
+.hero { padding: 64px 0 80px; }
+.hero h1 {
+  font-size: clamp(2.6rem, 9vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin: 0 0 24px;
+  max-width: 12ch;
+}
+.hero p { font-size: 1.2rem; color: var(--muted); max-width: 46ch; margin: 0 0 32px; }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.bowl {
+  width: 100%; max-width: 420px; aspect-ratio: 2 / 1;
+  background: var(--glaze);
+  border-radius: 0 0 420px 420px;
+  margin-top: 56px;
+}
+section { padding: 56px 0; }
+h2 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.item { background: var(--surface); padding: 28px; border-radius: 20px; }
+.item h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.item p { margin: 0; color: var(--muted); }
+footer { padding: 40px 0; color: var(--muted); border-top: 1px solid var(--glaze); }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Taller Barro</div>
+    <nav><a href="#cursos">MODALIDADES</a><a href="#contacto">Contacto</a></nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>GABRIEL</h1>
+      <img src="1.jpg" height="500" width="500">
+      <img src="img/j.jpg">
+      <p>Aprende a modelar tazas, platos y cuencos en un taller pequeño, con arcilla local y esmaltes propios.</p>
+      <a class="btn" href="#cursos">Ver los cursos</a>
+      <div class="bowl" aria-hidden="true"></div>
+    </div>
+
+    <section id="cursos">
+      <h2>MODALIDADES</h2>
+      <div class="grid">
+        <div class="item"><h3>Primer torno</h3><p>Cuatro sesiones para centrar la arcilla y levantar tu primera pieza.</p></div>
+        <div class="item"><h3>Modelado a mano</h3><p>Técnicas de pellizco, churros y planchas. No necesitas experiencia.</p></div>
+        <div class="item"><h3>Esmaltado</h3><p>Prueba colores y acabados, y lleva tus piezas a casa ya horneadas.</p></div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Reserva tu lugar</h2>
+      <p>Escríbenos a <strong>hola@tallerbarro.example</strong> y te respondemos en un día.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Taller Barro. Página de ejemplo.</footer>
+</div>
+</body>
+</html>
